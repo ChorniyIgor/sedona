@@ -25,16 +25,18 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
+		<link rel="stylesheet" href="css/style.css">
 
 	<script src="libs/modernizr/modernizr.js"></script>
 
 </head>
 
 <body>
-	<header>
-		<nav>
+	<header class="page-header">
+		<nav class="main-nav main-nav--closed main-nav--no-js">
+			<button class="main-nav__toggle" type="button" >Открить меню</button>
 			<div class="nav__wrapper">
-				<ul class="main__nav">
+				<ul class="main__nav-list">
 					<li><a href="#">Главная</a></li>
 					<li><a href="#">Фото и видео</a></li>
 					<li><a href="#">Форма отзыва</a></li>
@@ -43,17 +45,22 @@
 			</div>
 			<div class="nav__logo">
 				<a href="#">
-					<img src="" alt="" alt="Sedona">
+					<img src="img/logotyle-mobile.png" alt="Sedona" width="102" height="83">
 				</a>
 			</div>
 		</nav>
+		<div class="page-header__background">
+
+		</div>
 </header>
 
 <main>
-	<h2 class="site__promo">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h2>
+		<section class="adventages">
+			<div class="adventages__descr">
+				<h2 class="adventages__promo">СЕДОНА — небольшой городок в АРИЗОНЕ, зАСЛУЖИвающий большего!</h2>
+				<h1 class="advantages__title">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</h1>
+			</div>
 
-	<section class="adventages">
-		<h1 class="advantages__title">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</h1>
 		<ul class="advantages__list">
 			<li class="advantages__item">
 
@@ -176,10 +183,24 @@
 		<div class="loader_inner"></div>
 	</div>
 
+	<script>
+    var button=document.querySelector(".main-nav__toggle");
+    var nav=document.querySelector(".main-nav");
 
+    nav.classList.remove("main-nav--no-js");
 
+    button.addEventListener("click", function(){
+      if (nav.classList.contains("main-nav--closed")){
+        nav.classList.remove("main-nav--closed");
+        nav.classList.add("main-nav--opened");
+      }
+      else {
+        nav.classList.add("main-nav--closed");
+        nav.classList.remove("main-nav--opened");
+      }
 
-	<script src="js/common.js"></script>
+    });
+  </script>
 
 </body>
 </html>

@@ -1,0 +1,118 @@
+.main-nav{
+  min-height: 55px;
+  background: white;
+  position: relative;
+}
+.main-nav--closed{
+  .nav__wrapper{
+    display: none;
+  }
+}
+.main-nav--opened{
+  min-height: 280px;
+  .nav__wrapper{
+    display: block;
+  }
+
+  .main-nav{
+    &__toggle{
+      top: 0;
+      right: 0;
+      background: #81b3d2;
+    }
+    &__toggle::before,
+    &__toggle::after{
+      display: block;
+      content: "";
+      position: absolute;
+      background: white;
+      box-shadow: none;
+      width: 30px;
+      height: 4px;
+      top: 22px;
+      right: 20px;
+    }
+    &__toggle::before{
+      transform: rotate(45deg);
+    }
+    &__toggle::after{
+      transform: rotate(-45deg);
+    }
+  }
+}
+.main-nav__toggle{
+  width: 65px;
+  height: 55px;
+  background: white;
+  outline: none;
+  border: none;
+  font-size: 0px;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  &::before{
+    content: "";
+    display: block;
+    background: #81b3d2;
+    width: 23px;
+    height: 4px;
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    box-shadow: 0 8px #81b3d2,
+                0 16px #81b3d2;
+  }
+}
+.main__nav-list{
+  list-style: none;
+  li{
+    display:block;
+    width: 100%;
+    height: 55px;
+    background: #81b3d2;
+    border-bottom: 1px solid #678fa8;
+    border-top: 1px solid #9ac2db;
+    text-align: center;
+
+    a{
+      display: block;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 55px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+.nav__logo{
+  min-height: 55px;
+  img{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.main-nav--no-js{
+  .nav__wrapper{
+    display: block;
+  }
+  .main-nav__toggle{
+    display: none;
+  }
+}
+.page-header__background{
+  min-height: 388px;
+  background: url('../img/header-mobile.png') center no-repeat;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  &::before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    bottom: 0px;
+    background: url('../img/header-border-mobile.png') center bottom no-repeat;
+  }
+}
