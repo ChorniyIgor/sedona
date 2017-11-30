@@ -81,12 +81,37 @@
       line-height: 55px;
       text-transform: uppercase;
       font-weight: bold;
-        color:#f7f4f1;
+      color:#f7f4f1;
     }
+  }
+}
+.main__nav-list .active{
+  span{
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 55px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#f7f4f1;
+  }
+}
+.main__nav-list li:hover{
+  background: #86b2cd;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #669ec0;
+}
+.main__nav-list li:active{
+  background: #5496bd;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #77acca;
+  a{
+    color:#84b4d0;
   }
 }
 .nav__logo{
   min-height: 55px;
+  z-index: 2;
   img{
     position: absolute;
     left: 50%;
@@ -106,7 +131,7 @@
   background: url('../img/header-mobile.png') center no-repeat;
   width: 100%;
   position: relative;
-  z-index: -1;
+  z-index: 1;
   &::before{
     content: "";
     display: block;
@@ -115,5 +140,81 @@
     width: 100%;
     bottom: 0px;
     background: url('../img/header-border-mobile.png') center bottom no-repeat;
+  }
+}
+
+@media @tablet-widths {
+.main-nav__toggle{
+  display: none;
+}
+.main-nav--closed{
+  .nav__wrapper{
+    display: block;
+  }
+}
+.main__nav-list li:active,
+.main__nav-list li:hover
+{
+  background: white;
+  border: none;
+}
+.main__nav-list{
+  font-size: 0;
+  li{
+    width: 22%;
+    display: inline-block;
+    background: white;
+    border: none;
+    a{
+      font-size: 14px;
+      line-height: 58px;
+      text-transform: uppercase;
+      color:black;
+    }
+    a:hover{
+      color: #81b3d2;
+    }
+    a:active{
+      color: #000000;
+    }
+  }
+  li:nth-child(2){
+    margin-right: 12%;
+  }
+}
+  .nav__logo{
+    position: absolute;
+    height: 84px;
+    width: 102px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .page-header__background{
+    background: url('../img/header-tablet.png') center no-repeat;
+    min-height: 520px;
+  }
+  .main__nav-list .active span{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 58px;
+    color:black;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#766357;
+    &:hover{
+      color:#604e43;
+    }
+    &:active{
+      color:#766357;
+    }
+  }
+}
+
+@media @desktop-widths {
+  .nav__logo{
+  width: 188px;
+  height: 96px;
   }
 }

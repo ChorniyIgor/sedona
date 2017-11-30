@@ -37,7 +37,7 @@
 			<button class="main-nav__toggle" type="button" >Открить меню</button>
 			<div class="nav__wrapper">
 				<ul class="main__nav-list">
-					<li><a href="#">Главная</a></li>
+					<li class="active"><span>Главная</span></li>
 					<li><a href="#">Фото и видео</a></li>
 					<li><a href="#">Форма отзыва</a></li>
 					<li><a href="#">HTML Academy</a></li>
@@ -45,7 +45,12 @@
 			</div>
 			<div class="nav__logo">
 				<a href="#">
-					<img src="img/logotyle-mobile.png" alt="Sedona" width="102" height="83">
+					<picture>
+	          <source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+	          <source media="(min-width: 768px)" srcset="img/logotype-tablet.png">
+	          <img src="img/logotyle-mobile.png" alt="Sedona" >
+	        </picture>
+
 				</a>
 			</div>
 		</nav>
@@ -65,12 +70,16 @@
 			<li class="advantages__item">
 
 					<div class="advantage__descr">
-						<h2 class="adventage__title">НАСТОЯЩИЙ ГОРОДОК</h2>
+						<h2 class="adventage__title--first">НАСТОЯЩИЙ ГОРОДОК</h2>
 						<span class="number">№1</span>
 						<p class="advantage__descr-promo">СЕДОНА НЕ АТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
 					</div>
 					<div class="advantage__img">
-						<img src="img\photo-city@1x.png" height="260">
+						<picture>
+		          <source media="(min-width: 768px)" srcset="img/photo-city@1x-desktop.png">
+		          <img src="img/photo-city@1x.png" height="260">
+		        </picture>
+
 					</div>
 					<ul class="advantage__list-items">
 
@@ -93,19 +102,22 @@
 
 
 				<li class="advantages__item">
-						<div class="advantage__descr">
+						<div class="advantage__descr advantage__descr--right">
 							<h2 class="adventage__title--less-margin">ТАМ ЕСТЬ Мост дьявола</h2>
 							<span class="number">№2</span>
 							<p  class="advantage__descr-promo">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 						</div>
 						<div class="advantage__img">
-							<img src="img\photo-bridge@1x.png" height="260">
+							<picture>
+			          <source media="(min-width: 768px)" srcset="img/photo-bridge@1x-desktop.png">
+			          <img src="img/photo-bridge@1x.png" height="260">
+			        </picture>
 						</div>
 				</li>
 
 			<div class="advantages__item--white">
 				<li class="advantages__item advantages__item--border-bottom">
-						<div class="advantage__descr">
+						<div class="advantage__descr-flex">
 							<h2 class="adventage__title--less-margin">НЕБОЛЬШАЯ ПЛОЩАДЬ</h2>
 							<span class="number">№3</span>
 							<p  class="advantage__descr-promo">ВСЕ достопримеча- тельности находятся очень близко</p>
@@ -113,7 +125,7 @@
 				</li>
 
 				<li class="advantages__item advantages__item--border-bottom">
-						<div class="advantage__descr">
+						<div class="advantage__descr-flex">
 							<h2 class="adventage__title--less-margin">КРАСИВАЯ ДОРОГА</h2>
 							<span class="number">№4</span>
 							<p  class="advantage__descr-promo">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
@@ -121,7 +133,7 @@
 				</li>
 
 				<li class="advantages__item advantages__item--border-bottom">
-						<div class="advantage__descr">
+						<div class="advantage__descr-flex">
 							<h2 class="adventage__title--less-margin">МАЛО ТУРИСТОВ</h2>
 							<span class="number">№5</span>
 							<p  class="advantage__descr-promo">Большинство едет в гранд каньон и толпится там</p>
@@ -138,7 +150,12 @@
 	</section>
 
 	<section class="map">
-			<img src="img\map-mobile.png" height="350">
+
+			<picture>
+				<source media="(min-width: 1200px)" srcset="img/map-desktop.png">
+				<source media="(min-width: 768px)" srcset="img/map-tablet.png">
+				<img src="img/map-mobile.png" height="350">
+			</picture>
 	</section>
 
 	<footer class="page-footer">

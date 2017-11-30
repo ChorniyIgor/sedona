@@ -8,7 +8,6 @@
   margin-top: 42px;
   margin-bottom: 0;
 }
-
 .advantages__title{
   font-size: 14px;
   line-height: 26px;
@@ -124,6 +123,7 @@
     top: 25px;
   }
 }
+
 .advantage__list-item:nth-child(1) .list__item-title{
     &::before{
       background: url('../img/icons/icon-house.png') no-repeat;
@@ -181,5 +181,156 @@
     &::after{
       background:#333333;
     }
+  }
+}
+.adventage__title--first{
+  padding-top: 95px;
+  text-align: center;
+}
+@media @tablet-widths {
+  .adventage__title--first{
+    padding-top: 0px;
+  }
+  .adventages__promo{
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    margin-top: 45px;
+  }
+  .advantages__title{
+    margin-bottom: 55px;
+  }
+ .advantages__list{
+   &::before{
+     display: none;
+   }
+ }
+ .advantages__item{
+   display: -webkit-flex;
+   display: -ms-flex;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   border: none;
+ }
+ .advantage__descr{
+   width: 256px;
+   height: 260px;
+ }
+ .advantage__img{
+    flex-grow: 1;
+    width: 65%;
+ }
+ .advantage__list-items{
+   width: 100%;
+   display: -webkit-flex;
+   display: -ms-flex;
+   display: flex;
+   min-height: 330px;
+   padding: 0;
+ }
+ .advantage__list-item{
+    width: 53%;
+ }
+ .list__item-title{
+   font-size: 21px;
+   line-height: 26px;
+   text-align: center;
+   padding-top: 165px;
+ }
+ .list__item-descr{
+   margin-left: 20%;
+   margin-right: 20%;
+   text-align: center;
+   margin-top: 30px;
+   margin-bottom: 35px;
+ }
+ .advantage__list-item .list__item-title{
+     &::before{
+       left: 50%;
+       top: 55px;
+       transform: translateX(-50%);
+     }
+   }
+ .advantage__list-item:nth-child(1) .list__item-title{
+     &::before{
+       background: url('../img/icons/icon-house-tab.png') no-repeat;
+       width: 75px;
+       height: 72px;
+     }
+ }
+ .advantage__list-item:nth-child(2) .list__item-title{
+     &::before{
+       background: url('../img/icons/icon-burger-tab.png') no-repeat;
+       width: 77px;
+       height: 68px;
+     }
+ }
+ .advantage__list-item:nth-child(3) .list__item-title{
+     &::before{
+       background: url('../img/icons/icon-gift-tab.png') no-repeat;
+       width: 68px;
+       height: 77px;
+     }
+ }
+ .advantage__descr--right{
+  order:1;
+}
+.advantages__item--white{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  .advantages__item{
+    width: 33%;
+    height: 255px;
+    margin: 0;
+  }
+}
+.advantage__descr-flex{
+  width: 100%;
+  .adventage__title--less-margin{
+    margin-top: 50px;
+    padding-top: 0;
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .advantage__descr-promo{
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+}
+.adventage__title--first{
+  margin-top: 50px;
+}
+}
+@media @desktop-widths {
+  .adventages__promo{
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+  }
+  .advantages__title{
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+  .advantage__descr{
+    width: 400px;
+  }
+  .adventage__title--less-margin,
+  .adventage__title--first{
+    font-size: 21px;
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+  .list__item-descr{
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .adventages__descr{
+    padding-top: 45px;
+    padding-bottom: 55px;
+    background: white;
   }
 }
