@@ -113,6 +113,8 @@
   min-height: 55px;
   z-index: 2;
   img{
+
+      z-index: 2;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -143,6 +145,10 @@
   }
 }
 
+.page-header__background--min-hight{
+  min-height: 160px;
+  background: url('../img/header-mobile--min.png') center bottom no-repeat;
+}
 @media @tablet-widths {
 .main-nav__toggle{
   display: none;
@@ -209,6 +215,10 @@
     &:active{
       color:#766357;
     }
+  }
+  .page-header__background--min-hight{
+    min-height: 290px;
+    background: url('../img/header-tablet--min.png') center bottom no-repeat;
   }
 }
 
