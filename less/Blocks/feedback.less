@@ -1,6 +1,14 @@
 p[class="mobile-hidden"]{
   display: none;
 }
+
+.form__overall_impression label,
+.form__visited_places label {
+  cursor: pointer;
+}
+.desktop-hidden{
+  display: inline;
+}
 .feedback-title{
   text-align: center;
   margin-top: 40px;
@@ -131,7 +139,6 @@ p[class="mobile-hidden"]{
   }
   span{
     display: block;
-    width: 100%;
     line-height: 58px;
     font-size: 18px;
     text-transform:none;
@@ -248,6 +255,9 @@ p[class="mobile-hidden"]{
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 40px;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 @media @tablet-widths {
@@ -268,6 +278,9 @@ p[class="mobile-hidden"]{
     margin-top: 34px;
     border-bottom: none;
     padding-bottom: 80px;
+  }
+  .form__impression_descr{
+    width: 100%;
   }
   .form__user-info,
   .form__contact_information,
@@ -382,4 +395,87 @@ p[class="mobile-hidden"]{
     color: #333333;
     text-transform: uppercase;
   }
+}
+
+@media @desktop-widths {
+.desktop-hidden{
+    display: none;
+  }
+  .feedback{
+    background: white;
+  }
+  .feedback-title{
+    margin-top: 0px;
+    padding-top: 110px;
+  }
+  .feedback-descr{
+    margin: auto;
+    margin-top: 40px;
+    width: 40%;
+    padding-bottom: 65px;
+  }
+  .block__title{
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .h2-custom--no-desktop{
+    &::after{
+      display: none;
+    }
+  }
+  .form__contact_information{
+    label{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      flex-wrap: nowrap;
+      span{
+        display: block;
+        margin-bottom: 0;
+        line-height: 26px;
+      }
+      input[type="phone"],
+      input[type="email"]{
+        width: 315px;
+      }
+    }
+    .phone{
+      float: left;
+      margin-right: 140px;
+      span{
+        width: 80px;
+      }
+    }
+    .email{
+      span{
+        width: 160px;
+        box-sizing: border-box;
+      }
+    }
+    .h2-custom .block__title{
+      margin-bottom: 75px;
+    }
+  }
+  .form__visited_places{
+    .h2-custom .block__title{
+      margin-top: 50px;
+    }
+    .form__visited_places-list{
+      width: 100%;
+      margin: 0;
+      font-size: 0px;
+      label{
+        font-size: 0px;
+        display: inline-block;
+        width: 25%;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .user-form__btn{
+    width: 40%;
+  }
+
 }
