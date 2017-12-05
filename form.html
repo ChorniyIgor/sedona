@@ -105,9 +105,18 @@
 						<button type="submit" class="user-form__btn" name="form_send">Отправить заявку</button>
 						<p class="mobile-hidden form__hint">* — обязательные поля</p>
 					 </form>
+
+
 	</section>
 
+	<div class="form-popap__wrapper">
+		<div class="form-popap">
+			<button class="form-popap-close" type="button" title="Закрить">Закрить</button>
+			<p class="form-popap__text">Мы благодарны вам за ваш отзыв. <br>С нетерпением снова ждем вас в гости!</p>
+		</div>
+  </div>
 
+	<div class="form-overlay"></div>
 
 
 	<footer class="page-footer">
@@ -160,6 +169,8 @@
 	</div>
 
 	<script>
+
+	<!--Menu -->
     var button=document.querySelector(".main-nav__toggle");
     var nav=document.querySelector(".main-nav");
 
@@ -176,6 +187,33 @@
       }
 
     });
+
+		<!--Popap -->
+	var send=document.querySelector(".user-form__btn");
+	var popap=document.querySelector(".form-popap");
+	var close=document.querySelector(".form-popap-close");
+	var overlay=document.querySelector(".form-overlay");
+
+	send.addEventListener("click",function(event){
+	event.preventDefault();
+	popap.classList.add("show-block");
+	overlay.classList.add("show-block");
+	});
+
+	close.addEventListener("click",function(event){
+	event.preventDefault();
+	popap.classList.remove("show-block");
+	overlay.classList.remove("show-block");
+});
+
+window.addEventListener("keydown", function(event){
+	if (event.keyCode === 27){
+		if (popap.classList.contains("show-block")  && overlay.classList.contains("show-block")){
+		popap.classList.remove("show-block");
+		overlay.classList.remove("show-block");
+	}}
+});
+
   </script>
 
 </body>
