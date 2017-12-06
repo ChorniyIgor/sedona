@@ -78,7 +78,7 @@ gulp.task("svgsprite",function(){
 
 //збірка білд
 gulp.task("build",function(fn){
-  run("less", "min", "imagemin", "svgsprite", fn);
+  run("less", "min", "imagemin", fn);
 });
 
 
