@@ -105,18 +105,20 @@
       content: "";
       display: block;
       position: absolute;
-      width: 60px;
-      height: 60px;
       background: #e6e6e6;
-      right: 0;
-      bottom: 0;
     }
   }
   .phone::after{
-      background: url('../img/icons/phone.png') center no-repeat;
+      .sprite-icons;
+      .sprite-icons-phone;
+      right: 21px;
+      bottom: 20px;
     }
   .email::after{
-      background: url('../img/icons/mail.png') center no-repeat;
+      .sprite-icons;
+      .sprite-icons-mail;
+      right: 22px;
+      bottom: 23px;
     }
   input[type="phone"],
   input[type="email"]
@@ -207,11 +209,12 @@
       width: 58px;
       height: 58px;
       border-radius: 50%;
-      background: url('../img/icons/tick.png') center no-repeat;
+      .sprite-icons;
+      .sprite-icons-tick;
       display: none;
       position: absolute;
-      left: 0px;
-      top: 0;
+      left: 17px;
+      top: 21px;
     }
   }
   input[type="checkbox"]:checked~ span::after{
